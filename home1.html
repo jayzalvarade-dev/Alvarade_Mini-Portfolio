@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+        <a href="home1.html">Home</a> |
+        <a href="about2.html">About</a> |
+        <a href="portfolio2.html">Portfolio</a>
+    </nav>
+
+    <p>This is the home page.</p>
+
+    <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Picture" class="profile">
+    <div>
+    <button onclick="toggleBio()">Show More</button>
+    </div>
+    <p id="bio" class="hidden">
+        I'm a passionate web developer who loves to build beautiful and functional websites.
+    </p>
+
+    <script>
+        function toggleBio() {
+            const bio = document.getElementById("bio");
+            bio.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
